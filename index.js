@@ -49,7 +49,7 @@ function operate(a, operand, b) {
         return "Error: Invalid operator!";
     }
 }
-
+// Responsible for changing the on screen values
 function appendToDisplay(value) {
     const display = document.getElementById("display");
     const operators = ['+', '-', '/', '*'];
@@ -67,7 +67,7 @@ function appendToDisplay(value) {
     }
     display.value = displayValue;
 }
-
+// clears the display
 function clearDisplay() {
     displayValue = '';
     number1 = '';
@@ -87,7 +87,7 @@ function calculateResult() {
         shouldResetDisplay = true;
     }
 }
-
+// button selector creation
 document.querySelectorAll(".btn").forEach(button => {
     button.addEventListener("click", () => {
         const value = button.textContent;
